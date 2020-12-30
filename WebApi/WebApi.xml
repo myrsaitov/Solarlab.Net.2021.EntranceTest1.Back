@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:WebApi.Controllers.AccountController">
+            <summary>
+            Контролер логина и регистрации пользователя
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.AccountController.Login(WebApi.Models.Identity.IdentityDataInitializer)">
+            <summary>
+            Вход пользователя в систему, получение JWT-токена
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AccountController.Logout">
+            <summary>
+            Выход пользователя из системы
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AccountController.Register(WebApi.Models.Identity.RegisterModel)">
+            <summary>
+            Регистрация нового пользователя
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AccountController.GetSecuredData">
+            <summary>
+            Тестовый метод для получения данных авторизованного пользователя
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AccountController.GetUserName">
+            <summary>
+            Получить имя авторизированного пользователя 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.CategoryController.Get(System.Int32)">
+            <summary>
+            Получить категорию
+            </summary>
+            <param name="id">идентификатор</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:WebApi.Controllers.CategoryController.Create(WebApi.Models.CategoryCreateModel)">
+            <summary>
+            Создать категорию
+            </summary>
+            <param name="model">модель</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:WebApi.Controllers.CategoryController.Delete(System.Int32)">
+            <summary>
+            Удалить категорию 
+            </summary>
+            <param name="id">идентификатор</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:WebApi.Controllers.CategoryController.Update(WebApi.Models.Categories.CategoryUpdateModel)">
+            <summary>
+            Обновить категорию
+            </summary>
+            <param name="model">модель</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:WebApi.Controllers.CategoryController.GatPaged(System.Int32,System.Int32)">
+            <summary>
+            Получить постраничный список
+            </summary>
+            <param name="page">номер страницы</param>
+            <param name="pageSize">объем страницы</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="T:WebApi.Controllers.MyEventController">
+            <summary>
+            Контроллер объявлений
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.MyEventController.Get(System.Int32)">
+            <summary>
+            Получить объявление
+            </summary>
+            <param name="id">идентификатор</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:WebApi.Controllers.MyEventController.Create(WebApi.Models.MyEvents.MyEventCreateModel)">
+            <summary>
+            Создать объявление
+            </summary>
+            <param name="model">модель</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:WebApi.Controllers.MyEventController.Delete(System.Int32)">
+            <summary>
+            Удалить объявление 
+            </summary>
+            <param name="id">идентификатор</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:WebApi.Controllers.MyEventController.Update(WebApi.Models.MyEvents.MyEventUpdateModel)">
+            <summary>
+            Обновить объявление
+            </summary>
+            <param name="model">модель</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:WebApi.Controllers.MyEventController.GatPaged(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Получить постраничный список
+            </summary>
+            <param name="page">номер страницы</param>
+            <param name="pageSize">объем страницы</param>
+            <param name="categoryId">идентификатор страницы</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:WebApi.Controllers.MyEventController.AddComment(System.Int32,WebApi.Models.Comments.AddCommentModel)">
+            <summary>
+            Добавать комментарий
+            </summary>
+            <param name="myeventId">идентификатор объявления</param>
+            <param name="model">модель комментария</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:WebApi.Controllers.MyEventController.GetAllTags">
+            <summary>
+            Получить полный список тагов всех объявлений
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.MyEventController.GetTagPaged(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Получить постраничный список по таг
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEvents.MyEventModel.Title">
+            <summary>
+            Заголовок
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEvents.MyEventModel.Body">
+            <summary>
+            Тело объявления
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEvents.MyEventModel.email">
+            <summary>
+            Пользователь, создавший объявление
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEvents.MyEventModel.Deleted">
+            <summary>
+            Идентификатор удаления
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEvents.MyEventModel.CategoryId">
+            <summary>
+            Раздел (категория) объявления
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEvents.MyEventModel.Tags">
+            <summary>
+            Теги
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEvents.MyEventUpdateModel.Id">
+            <summary>
+            Идентификатор
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEventGetModel.Title">
+            <summary>
+            Заголовок
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEventGetModel.Body">
+            <summary>
+            Тело объявления
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEventGetModel.email">
+            <summary>
+            Пользователь, создавший объявление
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEventGetModel.Deleted">
+            <summary>
+            Идентификатор удаления
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEventGetModel.CategoryId">
+            <summary>
+            Идентификатор категории
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.MyEventGetModel.Tags">
+            <summary>
+            Теги
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.Comments.AddCommentModel.Body">
+            <summary>
+            Текст комментария
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.Comments.AddCommentModel.CommentDate">
+            <summary>
+            Дата и время комментария (UTC)
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.Comments.CommentModel.Id">
+            <summary>
+            Идентификатор комментария
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.Comments.CommentModel.Body">
+            <summary>
+            Текст комментария
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.Comments.CommentModel.CommentDate">
+            <summary>
+            Дата и время комментария (UTC)
+            </summary>
+        </member>
+        <member name="T:WebApi.Models.Identity.IdentityDataInitializer">
+            <summary>
+            Модель входа пользователя
+            </summary>
+        </member>
+        <member name="T:WebApi.Models.Identity.RegisterModel">
+            <summary>
+            Модель регистрации пользователя в системе
+            </summary>
+        </member>
+        <member name="T:WebApi.Models.Tags.TagModel">
+            <summary>
+            Тег. Транспортный объект.
+            </summary>
+        </member>
+        <member name="T:WebApi.Utils.IdentityDataInitializer">
+            <summary>
+            Инициализация ролей и пользователей в системе
+            </summary>
+        </member>
+    </members>
+</doc>

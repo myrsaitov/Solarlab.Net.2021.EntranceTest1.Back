@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200413213330_AddIdentity.cs" />
+    <Compile Remove="Migrations\20200413213330_AddIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20200419194028_UserEmailsToAdvWereAdded.cs" />
+    <Compile Remove="Migrations\20200419194028_UserEmailsToAdvWereAdded.Designer.cs" />
+    <Compile Remove="Migrations\20200419194149_UserEmailsToAdvWereAdded.cs" />
+    <Compile Remove="Migrations\20200419194149_UserEmailsToAdvWereAdded.Designer.cs" />
+    <Compile Remove="Migrations\20200505233007_TagsWereAdded_2.cs" />
+    <Compile Remove="Migrations\20200505233007_TagsWereAdded_2.Designer.cs" />
+    <Compile Remove="Migrations\20201229200331_Initial.cs" />
+    <Compile Remove="Migrations\20201229200331_Initial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.3" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataAccessLayer.Entities\DataAccess.Entities.csproj" />
+    <ProjectReference Include="..\DataAccessLayer.Repositories.Abstractions\DataAccess.Repositories.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

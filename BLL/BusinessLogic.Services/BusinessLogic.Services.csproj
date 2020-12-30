@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="FluentValidation" Version="8.6.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
+    <PackageReference Include="Validation" Version="2.4.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.Contracts\Common.Contracts.csproj" />
+    <ProjectReference Include="..\..\DAL\DataAccessLayer.Repositories.Abstractions\DataAccess.Repositories.Abstractions.csproj" />
+    <ProjectReference Include="..\BusinesLogic.Services.Abstractions\BusinessLogic.Services.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

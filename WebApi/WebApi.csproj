@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\WORK\WebApi\WebApi.xml</DocumentationFile>
+  </PropertyGroup>
+  
+  
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Serilog.Enrichers.Process" Version="2.0.1" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.Seq" Version="4.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BusinesLogic.Services.Abstractions\BusinessLogic.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\BLL\BusinessLogic.Services.Contracts\BusinessLogic.Services.Contracts.csproj" />
+    <ProjectReference Include="..\BLL\BusinessLogic.Services\BusinessLogic.Services.csproj" />
+    <ProjectReference Include="..\Common\Common.Contracts\Common.Contracts.csproj" />
+    <ProjectReference Include="..\DAL\DataAccessLayer.Context\DataAccess.Context.csproj" />
+    <ProjectReference Include="..\DAL\DataAccessLayer.Repositories.Abstractions\DataAccess.Repositories.Abstractions.csproj" />
+    <ProjectReference Include="..\Dashboard.Console\MyEvent.Console.csproj" />
+    <ProjectReference Include="..\DataAccessLayer.Entities\DataAccess.Entities.csproj" />
+  </ItemGroup>
+
+
+</Project>

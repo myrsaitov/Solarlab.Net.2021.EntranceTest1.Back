@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataAccessLayer.Entities\DataAccess.Entities.csproj" />
+    <ProjectReference Include="..\BusinessLogic.Services.Contracts\BusinessLogic.Services.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

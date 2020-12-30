@@ -1,0 +1,15 @@
+Add-Migration Initial_Migration -project DAL\DataAccessLayer.Context\DataAccess.Context.csproj
+
+Add-Migration Initial_Migration -project Dashboard.Console\Dashboard.Console.csproj
+
+Установить нужную версию:
+https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.102-windows-x64-installer
+
+
+dotnet tool install --global dotnet-ef --version 3.1.0
+
+PATH:
+C:\Program Files\dotnet
+
+
+dotnet ef migrations add AddedTradeToLot --startup-project Dashboard.Console/Dashboard.Console.csproj --project DAL\DataAccessLayer.Context/DataAccess.Context.csproj
