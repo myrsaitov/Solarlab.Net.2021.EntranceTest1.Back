@@ -65,37 +65,37 @@ namespace DataAccess.Context
                 new Category
                 {
                     Id = 1,
-                    Name = "Транспорт",
+                    Name = "День рождения",
                 },
                 new Category
                 {
                     Id = 2,
-                    Name = "Недвижимость",
+                    Name = "Праздник",
                 },
                  new Category
                 {
                     Id = 3,
-                    Name = "Мебель",
+                    Name = "День свадьбы",
                 },
                   new Category
                 {
                     Id = 4,
-                    Name = "Одежда",
+                    Name = "Поездка",
                 },
                    new Category
                 {
                     Id = 5,
-                    Name = "Бытовая техника",
+                    Name = "Поход",
                 },
                     new Category
                 {
                     Id = 6,
-                    Name = "Косметика",
+                    Name = "Ресторан",
                 },
                     new Category
                {
                      Id = 7,
-                        Name = "Животные",
+                        Name = "Кино",
                },
            };
             modelBuilder.Entity<Category>().HasData(categories);
