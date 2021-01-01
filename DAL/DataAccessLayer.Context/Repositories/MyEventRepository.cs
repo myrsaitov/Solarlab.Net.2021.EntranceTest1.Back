@@ -82,6 +82,7 @@ namespace DataAccess.Context.Repositories
             return await _dbContext.MyEvents
                 .AsNoTracking()
                 .Where(x => categoriesId.Contains(x.Category.Id))
+                //.Where(x => categoriesId.Contains(x.MyDateTime))
                 .Skip(skip)
                 .Take(pageSize).ToArrayAsync();
 
