@@ -26,7 +26,7 @@ namespace BusinessLogic.Services.Contracts.Models
         /// </summary>
         public DateTime MyDateTime { get; set; }
 
-        public string MyDateTimeStr { get; set; }
+
 
         /// <summary>
         /// Пользователь, создавший объявление

@@ -20,7 +20,7 @@ namespace WebApi.Mappings
                 .ForMember(s => s.Id, map => map.Ignore())
                 .ForMember(s => s.Comments, map => map.Ignore())
                 .ForMember(s => s.Category, map => map.Ignore());
-               // .ForMember(s => s.MyDateTime, map => map.Ignore());
+                //.ForMember(s => s.MyDateTime, map => map.MapFrom(d=>d.MyDateTimeStr));
                // .ForMember(s => s.MyDateTimeStr, map => map.Ignore()); ;
              //.ForMember(s => s.CategoryId, map => map.MapFrom(m => m.CategoryId));
              CreateMap<MyEventUpdateModel, MyEventDto>()

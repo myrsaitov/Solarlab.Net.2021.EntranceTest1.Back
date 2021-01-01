@@ -22,7 +22,7 @@ namespace WebApi.Models.MyEvents
         /// </summary>
         public DateTime MyDateTime { get; set; }
 
-        public string MyDateTimeStr { get; set; }
+
 
         /// <summary>
         /// Пользователь, создавший объявление
