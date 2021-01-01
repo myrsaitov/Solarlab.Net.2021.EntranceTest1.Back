@@ -16,7 +16,14 @@ namespace WebApi.Models.MyEvents
         /// Тело объявления
         /// </summary>
         public string Body { get; set; }
-       
+
+        /// <summary>
+        /// Время и дата события
+        /// </summary>
+        public DateTime MyDateTime { get; set; }
+
+        public string MyDateTimeStr { get; set; }
+
         /// <summary>
         /// Пользователь, создавший объявление
         /// </summary>

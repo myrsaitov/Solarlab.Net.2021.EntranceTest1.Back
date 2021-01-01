@@ -19,14 +19,16 @@ namespace WebApi.Mappings
             CreateMap<MyEventCreateModel, MyEventDto>()
                 .ForMember(s => s.Id, map => map.Ignore())
                 .ForMember(s => s.Comments, map => map.Ignore())
-                .ForMember(s => s.Category, map => map.Ignore())
-                .ForMember(s => s.MyDateTime, map => map.Ignore());
-            // .ForMember(s => s.CategoryId, map => map.MapFrom(m => m.CategoryId));
-            CreateMap<MyEventUpdateModel, MyEventDto>()
-                .ForMember(s => s.Comments, map => map.Ignore())
-                .ForMember(s => s.Category, map => map.Ignore())
-                .ForMember(s => s.CategoryId, map => map.MapFrom(m => m.CategoryId))
-                .ForMember(s => s.MyDateTime, map => map.Ignore());
+                .ForMember(s => s.Category, map => map.Ignore());
+               // .ForMember(s => s.MyDateTime, map => map.Ignore());
+               // .ForMember(s => s.MyDateTimeStr, map => map.Ignore()); ;
+             //.ForMember(s => s.CategoryId, map => map.MapFrom(m => m.CategoryId));
+             CreateMap<MyEventUpdateModel, MyEventDto>()
+                 .ForMember(s => s.Comments, map => map.Ignore())
+                 .ForMember(s => s.Category, map => map.Ignore())
+                 .ForMember(s => s.CategoryId, map => map.MapFrom(m => m.CategoryId));
+             // .ForMember(s => s.MyDateTime, map => map.Ignore());
+             // .ForMember(s => s.MyDateTimeStr, map => map.Ignore());
         }
     }
 }
