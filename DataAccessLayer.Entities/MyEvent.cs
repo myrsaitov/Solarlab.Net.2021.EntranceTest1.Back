@@ -14,6 +14,8 @@ namespace DataAccess.Entities
         [MaxLength(2048)]
         public string Body { get; set; }
 
+        public DateTime MyDateTime { get; set; }
+
         [MaxLength(32)]
         public string email { get; set; }
 

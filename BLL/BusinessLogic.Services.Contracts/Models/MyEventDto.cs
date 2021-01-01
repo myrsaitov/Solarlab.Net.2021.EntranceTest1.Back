@@ -22,6 +22,11 @@ namespace BusinessLogic.Services.Contracts.Models
         public string Body { get; set; }
 
         /// <summary>
+        /// Время и дата события
+        /// </summary>
+        public DateTime MyDateTime { get; set; }
+
+        /// <summary>
         /// Пользователь, создавший объявление
         /// </summary>
         public string email { get; set; }
