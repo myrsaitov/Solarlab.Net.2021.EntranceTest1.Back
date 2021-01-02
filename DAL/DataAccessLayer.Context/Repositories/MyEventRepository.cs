@@ -59,6 +59,7 @@ namespace DataAccess.Context.Repositories
         {
             var skip = (page - 1) * pageSize;
             return await _dbContext.MyEvents
+                .OrderBy(x=>x.MyDateTime)
                 .Include(x => x.Comments)
                 .Include(x => x.Category)
                 //.Include(x => x.Category.ChildCategories)
